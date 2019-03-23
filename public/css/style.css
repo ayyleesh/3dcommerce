@@ -1,0 +1,19 @@
+.intro-2 {
+    background: url("https://placehold.it/2000x2000")no-repeat center center;
+    background-size: cover;
+}
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.bg-img{
+  background-size:cover;
+  height: 250px !important;
+}
+
+.productbanner{
+  background: url("https://placehold.it/2000x1000");
+}

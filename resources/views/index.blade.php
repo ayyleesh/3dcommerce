@@ -1,29 +1,31 @@
-@extends('master')
+@extends('layouts.app')
 
 @section('title')
 Home
 @endsection
 
-@section('content')
+@section('banner')
 <!--full page banner-->
 <div class="view intro-2">
-    <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
-            <div class="container text-center white-text">
-                <div class="white-text text-center wow fadeInUp">
-                    <h1>Hello</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
-                </div>
-            </div>
+  <div class="full-bg-img">
+    <div class="mask rgba-black-light flex-center">
+      <div class="container text-center white-text">
+        <div class="white-text text-center wow fadeInUp">
+          <h1>Hello</h1>
+          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+@endsection
 
-<main>
-  <div class="container w-75"> lorem
-    <!-- overview -->
-    <section class="mt-5 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-      <h3 class="h3 text-center mb-5">About</h3>
+
+@section('content')
+<div class="container w-75">
+  <!-- overview -->
+  <section class="mt-5 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <h3 class="h3 text-center mb-5">About</h3>
     <div class="row my-5">
       <div class="col-md-6 mb-4">
         <img src="http://placehold.it/500x250" class="img-fluid z-depth-1-half" alt="">
@@ -42,53 +44,54 @@ Home
         <img src="http://placehold.it/500x250" class="img-fluid z-depth-1-half" alt="">
       </div>
     </div>
-    <hr class="my-5">
+  </section>
+  <hr class="my-5">
+
+  <section class="mb-4 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
     <h3 class="h3 text-center mb-5">Products</h3>
-    <div class="row mb-4 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="row">
       <div class="col-md-4 my-3">
-      <a href="/product">
-      <div class="card">
-          <div class="view overlay">
+        <a href="{{url('product')}}">
+          <div class="card">
+            <div class="view overlay">
               <img src="https://placehold.it/300x250" class="card-img-top" alt="">
               <div class="mask rgba-white-slight waves-effect waves-light"></div>
-          </div>
-          <div class="card-body">
+            </div>
+            <div class="card-body">
               <h4 class="card-title text-center">Product 1</h4>
+            </div>
           </div>
+        </a>
       </div>
-      </a>
-    </div>
 
-    <div class="col-md-4 my-3">
-    <a href="/product">
-    <div class="card">
-        <div class="view overlay">
+      <div class="col-md-4 my-3">
+        <a href="{{url('product')}}">
+          <div class="card">
+            <div class="view overlay">
+              <img src="https://placehold.it/300x250" class="card-img-top" alt="">
+              <div class="mask rgba-white-slight waves-effect waves-light"></div>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title text-center">Product 1</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 my-3">
+      <a href="{{url('product')}}">
+        <div class="card">
+          <div class="view overlay">
             <img src="https://placehold.it/300x250" class="card-img-top" alt="">
             <div class="mask rgba-white-slight waves-effect waves-light"></div>
-        </div>
-        <div class="card-body">
+          </div>
+          <div class="card-body">
             <h4 class="card-title text-center">Product 1</h4>
+          </div>
         </div>
+      </a>
     </div>
-    </a>
-  </div>
-
-  <div class="col-md-4 my-3">
-  <a href="/product">
-  <div class="card">
-      <div class="view overlay">
-          <img src="https://placehold.it/300x250" class="card-img-top" alt="">
-          <div class="mask rgba-white-slight waves-effect waves-light"></div>
-      </div>
-      <div class="card-body">
-          <h4 class="card-title text-center">Product 1</h4>
-      </div>
-  </div>
-  </a>
-</div>
-
     </div>
   </section>
-  </div>
-</main>
+</div>
 @endsection
