@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Product
+{{$product->name}}
 @endsection
 
 @section('banner')
@@ -10,7 +10,7 @@ Product
   <div class="full-bg-img flex-center">
     <div class="container text-center white-text">
       <div class="white-text text-center wow fadeInUp">
-        <h1>Product</h1>
+        <h1>{{$product->name}}</h1>
       </div>
     </div>
   </div>
@@ -22,9 +22,9 @@ Product
   <!-- product desc -->
   <div class="row my-5">
     <div class="col-md-8 align-middle text-right">
-      <h3>Product name</h3>
-      <h5>$price</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h3>{{$product->name}}</h3>
+      <h5>{{$product->price}}</h5>
+      <p>{{$product->description}}</p>
     </div>
     <div class="col-md-4 h-25">
       <img class="img-fluid" src="http://placehold.it/300" alt="">

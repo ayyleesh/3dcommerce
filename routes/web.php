@@ -15,15 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function ()
-{
-  return view('index');
-});
-
-Route::get('/product', function ()
-{
-  return view('product');
-});
+Route::get('/', 'LandingPageController@index')->name('index');
+Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
 Route::get('/login', function(){
   return view('login');

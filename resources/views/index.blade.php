@@ -50,47 +50,21 @@ Home
   <section class="mb-4 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
     <h3 class="h3 text-center mb-5">Products</h3>
     <div class="row">
-      <div class="col-md-4 my-3">
-        <a href="{{url('product')}}">
+      @foreach ($products as $product)
+      <div class="col-md-3 my-3">
+        <a href="{{route('product.show', $product->slug)}}">
           <div class="card">
             <div class="view overlay">
               <img src="https://placehold.it/300x250" class="card-img-top" alt="">
               <div class="mask rgba-white-slight waves-effect waves-light"></div>
             </div>
             <div class="card-body">
-              <h4 class="card-title text-center">Product 1</h4>
+              <h4 class="card-title text-center">{{$product->name}}</h4>
             </div>
           </div>
         </a>
       </div>
-
-      <div class="col-md-4 my-3">
-        <a href="{{url('product')}}">
-          <div class="card">
-            <div class="view overlay">
-              <img src="https://placehold.it/300x250" class="card-img-top" alt="">
-              <div class="mask rgba-white-slight waves-effect waves-light"></div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title text-center">Product 1</h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 my-3">
-      <a href="{{url('product')}}">
-        <div class="card">
-          <div class="view overlay">
-            <img src="https://placehold.it/300x250" class="card-img-top" alt="">
-            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title text-center">Product 1</h4>
-          </div>
-        </div>
-      </a>
-    </div>
+      @endforeach
     </div>
   </section>
 </div>
