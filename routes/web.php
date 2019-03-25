@@ -18,6 +18,10 @@
 Route::get('/', 'LandingPageController@index')->name('index');
 Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
+Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+
 Route::get('/login', function(){
   return view('login');
 });

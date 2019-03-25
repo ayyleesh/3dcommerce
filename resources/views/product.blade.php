@@ -98,7 +98,13 @@
           <option value="2">Two</option>
           <option value="3">Three</option>
         </select>
-        <button class="btn btn-unique">add to cart</button>
+        <form class="" action="{{route('cart.store')}}" method="post">
+          {{ csrf_field()}}
+          <input type="hidden" name="id" value="{{$product->id}}">
+          <input type="hidden" name="name" value="{{$product->name}}">
+          <input type="hidden" name="price" value="{{$product->price}}">
+          <button type="submit" class="btn btn-unique">add to cart</button>
+        </form>
       </div>
     </div>
   </div>
