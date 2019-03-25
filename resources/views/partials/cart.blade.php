@@ -52,10 +52,10 @@
               <td></td>
               <td>{{$item->model->price}}</td>
               <td>
-                <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+                <input type="number" value="{{$item->qty}}" data-id="{{$item->rowId}}" aria-label="Search" class="form-control quantity" style="width: 100px">
               </td>
               <td class="font-weight-bold">
-                <strong>$800</strong>
+                <strong>{{$item->subtotal}}</strong>
               </td>
               <td>
                 <form class=""  action="{{route('cart.destroy', $item->rowId)}}" method="post">
@@ -103,3 +103,28 @@
   </div>
 
 </div>
+
+@section('extra-js')
+  <script src="{{asset('js/app.js')}}"></script>
+  <script type="text/javascript">
+    (function() {
+      const classname = document.querySelectorAll('.quantity')
+
+      Array.from(classname).forEach(function(element){
+        element.addEventListener('change', function(){
+          const id = element.getAttribute('data-id');
+          axios.patch(`/cart/${id}`, {
+            quantity: this.value
+          })
+          .then(function(response) {
+            console.log(response);
+            window.location.href = '{{route('cart.index')}}'
+          })
+          .catch(function(error){
+            console.log(error);
+          });
+        })
+      })
+    })();
+  </script>
+@endsection

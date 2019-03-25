@@ -15,10 +15,10 @@ Cart
 
   @if (Cart::count() > 0)
     <h3>{{Cart::count()}} item(s) in the shopping cart</h3>
-    @include('partials.cart');
+    @include('partials.cart')
   @else
     <h3>No items in cart</h3>
   @endif
-  
+
 </div>
 @endsection
