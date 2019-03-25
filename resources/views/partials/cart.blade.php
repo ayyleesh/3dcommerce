@@ -83,9 +83,9 @@
                 </h4>
               </td>
               <td colspan="3" class="text-right">
-                <button type="button" class="btn btn-primary btn-rounded waves-effect waves-light">Complete purchase
+                <a href="{{route('checkout.index')}}" type="button" class="btn btn-primary btn-rounded waves-effect waves-light">Complete purchase
                   <i class="fas fa-angle-right right"></i>
-                </button>
+                </a>
               </td>
             </tr>
             <!-- /.Subtotal row -->

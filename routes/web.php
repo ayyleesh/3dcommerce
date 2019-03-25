@@ -23,9 +23,7 @@ Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
 
-Route::get('/login', function(){
-  return view('login');
-});
+Route::get('/checkout', 'CheckoutController@index')->name('checkout.index')->middleware('auth');
 
 Route::get('/register', function(){
   return view('register');
