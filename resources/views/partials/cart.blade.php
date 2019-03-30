@@ -83,7 +83,8 @@
                 </h4>
               </td>
               <td colspan="3" class="text-right">
-                <a href="{{route('checkout.index')}}" type="button" class="btn btn-primary btn-rounded waves-effect waves-light">Complete purchase
+                <a href="{{route('checkout.index')}}" class="btn btn-primary btn-rounded btn-brown waves-effect waves-light">
+                  <span class="white-text">Complete purchase</span>
                   <i class="fas fa-angle-right right"></i>
                 </a>
               </td>

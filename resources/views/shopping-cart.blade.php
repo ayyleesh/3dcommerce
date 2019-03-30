@@ -6,7 +6,7 @@ Cart
 @endsection
 
 @section('content')
-<div class="container w-75 h-75">
+<div class="container w-75">
   @if (session()->has('success_message'))
     <div class="alert alert-success">
       {{session()->get('success_message')}}

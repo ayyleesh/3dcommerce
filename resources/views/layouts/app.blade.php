@@ -23,7 +23,8 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
   <link href="{{asset('css/style.css')}}" rel="stylesheet" >
-
+  @yield('extra-css')
+  
 </head>
 <body>
 @include('partials.topbar')

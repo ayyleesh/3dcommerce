@@ -4,31 +4,26 @@
 Checkout
 @endsection
 
+@section('extra-css')
+<script src="https://js.stripe.com/v3" charset="utf-8"></script>
+@endsection
+
 @section('content')
 <div class="container w-75">
   <div class="row">
     <div class="col-md-7">
-      <form>
+      <form action="{{route('checkout.store')}}" method="POST">
+        {{csrf_field()}}
         <h3>Shipping Details</h3>
         <sub>*for privacy reasons all informations on this page will not be recorded</sub>
         <!-- Grid row -->
         <div class="form-row">
           <!-- Grid column -->
-          <div class="col-md-6">
+          <div class="col-md-12">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="firstnameinput">
-              <label for="firstnameinput">First name</label>
-            </div>
-          </div>
-          <!-- /.Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <!-- Material input -->
-            <div class="md-form form-group">
-              <input type="text" class="form-control" id="lastnameinput">
-              <label for="lastnameinput">Last name</label>
+              <input type="text" class="form-control" id="nameinput" name="name" value="">
+              <label for="firstnameinput">Full name</label>
             </div>
           </div>
           <!-- /.Grid column -->
@@ -41,7 +36,7 @@ Checkout
           <div class="col-md-12">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="addressinput">
+              <input type="text" class="form-control" id="addressinput" name="address" value="">
               <label for="addressinput">Address</label>
             </div>
           </div>
@@ -55,7 +50,7 @@ Checkout
           <div class="col-md-12">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="address2input">
+              <input type="text" class="form-control" id="address2input" name="address2" value="">
               <label for="address2input">Address 2</label>
             </div>
           </div>
@@ -69,7 +64,7 @@ Checkout
           <div class="col-md-6">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="cityinput" required>
+              <input type="text" class="form-control" id="cityinput" name="city" value="">
               <label for="cityinput">City</label>
             </div>
           </div>
@@ -79,7 +74,7 @@ Checkout
           <div class="col-md-6">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="zipcode" required>
+              <input type="text" class="form-control" id="zipcode" name="zip" value="">
               <label for="zipcode">Zip</label>
             </div>
           </div>
@@ -93,7 +88,7 @@ Checkout
         <div class="form-row">
           <div class="col-md-12">
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="cardnumberinput" required>
+              <input type="text" class="form-control" id="cardnumberinput" name="cardnumber" value="">
               <label for="cardnumberinput">Card number</label>
             </div>
           </div>
@@ -104,7 +99,7 @@ Checkout
         <div class="form-row">
           <div class="col-md-12">
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="cardholdernameinput" required>
+              <input type="text" class="form-control" id="cardholdernameinput" name="cardname" value="">
               <label for="cardholdernameinput">Cardholder name</label>
             </div>
           </div>
@@ -117,7 +112,7 @@ Checkout
           <div class="col-md-6">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="password" class="form-control" id="cvvinput" required>
+              <input type="password" class="form-control" id="cvvinput" name="cvv" value="">
               <label for="cvvinput">CVV</label>
             </div>
           </div>
@@ -132,12 +127,12 @@ Checkout
                 </div>
                 <!-- Grid column -->
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="expirymonth" MM>
+                  <input type="text" class="form-control" id="expirymonth" name="expm" value="">
                   <label for="expirymonth">MM</label>
                 </div>
                 <!-- Grid column -->
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="expiryyear" MM>
+                  <input type="text" class="form-control" id="expiryyear" name="expy" value="">
                   <label for="expiryyear">YY</label>
                 </div>
               </div>

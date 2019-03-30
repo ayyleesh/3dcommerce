@@ -17,3 +17,9 @@ header,
 .productbanner{
   background: url("https://placehold.it/2000x1000");
 }
+
+nav.position-bottom{
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
