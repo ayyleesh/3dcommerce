@@ -1,7 +1,3 @@
-.intro-2 {
-    background: url("https://placehold.it/2000x2000")no-repeat center center;
-    background-size: cover;
-}
 html,
 body,
 header,
@@ -9,17 +5,72 @@ header,
     height: 100%;
 }
 
-.bg-img{
-  background-size:cover;
-  height: 250px !important;
+/* navbar */
+.navbar-expand-lg.navbar-dark.scrolling-navbar.top-nav-collapse {
+  background: linear-gradient(80deg,#880e4f,#1a237e);
 }
 
-.productbanner{
-  background: url("https://placehold.it/2000x1000");
-}
 
 nav.position-bottom{
   bottom: 0 !important;
   left: 0 !important;
   right: 0 !important;
 }
+
+
+.side-nav {
+    position: fixed;
+    width: 15rem;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  }
+
+  .side-nav.navbar-dark .navbar-nav .nav-item .nav-link {
+    color: rgba(255,255,255,1);
+  }
+
+  .side-nav.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    color: rgba(255,255,255,.75);
+  }
+
+/* banners */
+  .intro-2 {
+    background: url("https://placehold.it/2000x2000")no-repeat center center;
+    background-size: cover;
+  }
+  .bg-img{
+    background-size:cover;
+    height: 250px !important;
+  }
+
+  .productbanner{
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+/* card */
+.card.card-image{
+   background-size: cover !important;
+   background-position-x: center !important;
+}
+
+/* carousel slider */
+  ul#lightSlider {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+  }
+  #lightSlider > li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+  }
+  #lightSlider > img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }

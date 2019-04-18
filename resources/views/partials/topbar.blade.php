@@ -1,4 +1,4 @@
-<nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark brown">
+<nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="{{ url('/') }}">
       [WebName]
