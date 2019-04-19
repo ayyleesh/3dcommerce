@@ -14,10 +14,12 @@
 @section('banner')
 <!-- banner -->
 <div class="productbanner h-50" style="background: url('{{asset("img/$product->slug/$product->slug-banner.png")}}')">
-  <div class="full-bg-img flex-center">
-    <div class="container text-center white-text">
-      <div class="white-text text-center wow fadeInUp">
-        <h1>{{$product->name}}</h1>
+  <div class="mask pattern-1 flex-center">
+    <div class="full-bg-img flex-center">
+      <div class="container text-center white-text">
+        <div class="white-text text-center wow fadeInUp">
+          <h1>{{$product->name}}</h1>
+        </div>
       </div>
     </div>
   </div>
@@ -30,21 +32,20 @@
   <div class="row my-5">
     <div class="col-md-6 align-middle text-right px-4">
       <h3>{{$product->name}}</h3>
-      <h5>{{$product->price}}</h5>
+      <h5>{{$product->presentPrice()}}</h5>
       <p>{{$product->description}}</p>
       <form class="" action="{{route('cart.store')}}" method="post">
         {{ csrf_field()}}
         <input type="hidden" name="id" value="{{$product->id}}">
         <input type="hidden" name="name" value="{{$product->name}}">
         <input type="hidden" name="price" value="{{$product->price}}">
-        <button type="submit" class="btn btn-unique">add to cart</button>
+        <button type="submit" class="btn btn-outline-unique">add to cart</button>
       </form>
     </div>
     <div class="col-md-6 px-4">
       @include('partials.carousel')
     </div>
   </div>
-</div>
 
   <hr>
   <h3 class="text-center">Gallery</h3>

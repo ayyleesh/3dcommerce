@@ -140,57 +140,53 @@ Checkout
           </div>
         </div>
         <!-- /.Grid row -->
-        <button type="submit" class="btn btn-primary btn-lg">Check Out</button>
-      </form>
+
     </div>
-    <div class="col-md-5">
-      <h3>Your Order</h3>
-      <!-- Table header -->
-      <div class="row">
-        <div class="col-md-8">
-          <h5 class="text-center">Item name</h5>
-        </div>
-        <div class="col-md-2">
-          <h5>Qty.</h5>
-        </div>
-        <div class="col-md-2">
-          <h5>Price</h5>
+    <div class="col-md-5 text-center">
+      <div class="card position-fixed">
+        <div class="card-body grey lighten-3 table-responsive text-nowrap">
+          <table class="table">
+            <!-- Cart items -->
+            @foreach(Cart::content() as $item)
+            <tr>
+              <td>
+                <img src="{{asset('img/'.$item->model->slug.'/'.$item->model->slug.'-gallery00.png')}}" alt="" width="100px">
+              </td>
+              <td>
+                <div class="row">
+                  <strong>{{$item->model->name}}</strong>
+                </div>
+                <div class="row">
+                  <small>({{$item->model->details}})</small>
+                </div>
+                <div class="row">
+                  <small>Price: {{$item->model->presentPrice()}}</small>
+                </div>
+              </td>
+
+              <td>x {{$item->qty}}</td>
+              <td>{{presentPrice($item->subtotal)}}</td>
+            </tr>
+            @endforeach
+            <!-- subtotals -->
+            <tr>
+              <td colspan="2" class="py-3 pr-4 text-left">Subtotal</td>
+              <td colspan="2" class="py-3 pl-4 text-right">{{presentPrice(Cart::subtotal())}}</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="py-3 pr-4 text-left">Tax (8%)</td>
+              <td colspan="2" class="py-3 pl-4 text-right">{{presentPrice(Cart::tax())}}</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="py-3 pr-4 text-left"><h5>Total</h5></td>
+              <td colspan="2" class="py-3 pl-4 text-right"><h5>{{presentPrice(Cart::total())}}</h5></td>
+            </tr>
+          </table>
+          <button type="submit" class="btn btn-outline-unique btn-lg btn-block">Check Out</button>
+        </form>
+          </a>
         </div>
       </div>
-      <!-- /.Table header -->
-
-      <!-- Table content -->
-      <hr class="mt-0">
-      @foreach(Cart::content() as $item)
-        <div class="row">
-          <div class="col-md-4">
-            <img src="http://placehold.it/100" alt="">
-          </div>
-          <div class="col-md-4">
-            {{$item->model->name}}
-          </div>
-          <div class="col-md-2">
-            {{$item->qty}}
-          </div>
-          <div class="col-md-2">
-            {{$item->subtotal}}
-          </div>
-        </div>
-      <hr>
-      @endforeach
-      <!-- /.Table content -->
-
-      <!-- Subtotal -->
-      <div class="row">
-        <div class="col-md-10">
-          <h5 class="text-left">Total</h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="text-right">{{$item->total}}</h5>
-        </div>
-      </div>
-      <!-- /.Subtotal -->
-
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
 <div class="container w-50">
   <div class="card">
 
-    <h5 class="card-header brown white-text text-center py-4">
+    <h5 class="card-header gradientsolid white-text text-center py-4">
       <strong>Sign in</strong>
     </h5>
 
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="form-group mb-0">
-                        <button class="btn btn-outline-brown btn-rounded btn-block mt-4 waves-effect z-depth-0" type="submit">
+                        <button class="btn btn-outline-unique btn-block mt-4" type="submit">
                             {{ __('Login') }}
                         </button>
 

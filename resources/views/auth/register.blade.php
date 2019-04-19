@@ -7,7 +7,7 @@ Register
 @section('content')
 <div class="container w-50">
   <div class="card">
-    <h5 class="card-header  brown white-text text-center py-4">
+    <h5 class="card-header gradientsolid white-text text-center py-4">
       <strong>{{ __('Register') }}</strong>
     </h5>
 
@@ -57,7 +57,7 @@ Register
                 <label class="form-check-label" for="toc">By registering, I agree to the Terms and Condition</label>
             </div>
 
-            <button type="submit" class="btn btn-outline-brown btn-rounded btn-block my-4 waves-effect z-depth-0">
+            <button type="submit" class="btn btn-outline-unique btn-rounded btn-block my-4 waves-effect z-depth-0">
                 {{ __('Register') }}
             </button>
         </form>

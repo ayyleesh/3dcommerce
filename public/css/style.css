@@ -10,6 +10,21 @@ header,
   background: linear-gradient(80deg,#880e4f,#1a237e);
 }
 
+/* gradient color */
+.gradientmask, .gradientmask:after {
+    background: linear-gradient(110deg,rgba(136,14,79,.7),rgba(26,35,126,.7));
+}
+
+.gradientsolid, .gradientsolid:after {
+    background: linear-gradient(110deg,rgba(136,14,79,1),rgba(26,35,126,1));
+}
+
+.md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]), .md-form input[type=password]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]), .md-form input[type=search]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]), .md-form input[type=text]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]), .md-form input[type=url]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]){
+  webkit-box-shadow: 0 1px 0 0 #880e4f;
+    box-shadow: 0 1px 0 0 #880e4f;
+    border-bottom: 1px solid #880e4f;
+}
+
 
 nav.position-bottom{
   bottom: 0 !important;
@@ -36,6 +51,11 @@ nav.position-bottom{
     color: rgba(255,255,255,.75);
   }
 
+  .side-nav li:hover{
+    background-color: rgba(29,54,86,.3);
+    transition: all .3s cubic-bezier(0.4, 0, 1, 1);    
+}
+
 /* banners */
   .intro-2 {
     background: url("https://placehold.it/2000x2000")no-repeat center center;
@@ -50,13 +70,20 @@ nav.position-bottom{
     background-size: cover !important;
     background-position: center !important;
   }
-  
+
 /* card */
 .card.card-image{
    background-size: cover !important;
    background-position-x: center !important;
 }
 
+/* button */
+.btn-outline-unique{
+  box-shadow: 3px 4px 0px 0px rgb(136, 14, 79), 0 0 0 0 rgba(0,0,0,.15);
+}
+.btn-outline-unique:hover, .btn-outline-unique:active, .btn-outline-unique:focus{
+  box-shadow: 0px 0px 0px 0px rgb(136, 14, 79), 0 0 0 0 rgba(0,0,0,.15);
+}
 /* carousel slider */
   ul#lightSlider {
     list-style: none outside none;

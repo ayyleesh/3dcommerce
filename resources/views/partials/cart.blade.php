@@ -1,108 +1,73 @@
-<div class="col-md-12 my-3 text-left">
-
-  <div class="card">
-    <div class="card-body">
-
-      <!-- Shopping Cart table -->
-      <div class="table-responsive">
-
-        <table class="table product-table">
-
-          <!-- Table head -->
-          <thead class="mdb-color lighten-5">
-            <tr>
-              <th></th>
-              <th class="font-weight-bold">
-                <strong>Product</strong>
-              </th>
-              <th class="font-weight-bold">
-                <strong>Color</strong>
-              </th>
-              <th></th>
-              <th class="font-weight-bold">
-                <strong>Price</strong>
-              </th>
-              <th class="font-weight-bold">
-                <strong>QTY</strong>
-              </th>
-              <th class="font-weight-bold">
-                <strong>Amount</strong>
-              </th>
-              <th></th>
-            </tr>
-          </thead>
-          <!-- /.Table head -->
-
-          <!-- Table body -->
-          <tbody>
-
-            <!-- table row -->
-            @foreach (Cart::content() as $item)
-            <tr>
-              <th scope="row">
-                <img src="http://placehold.it/100" alt="" class="img-fluid z-depth-0">
-              </th>
-              <td>
-                <a href="{{route('product.show', $item->model->slug)}}"><h5 class="mt-3">
-                  <strong>{{$item->model->name}}</strong>
-                </h5></a>
-                <p class="text-muted">Apple</p>
-              </td>
-              <td>White</td>
-              <td></td>
-              <td>{{$item->model->price}}</td>
-              <td>
-                <input type="number" value="{{$item->qty}}" data-id="{{$item->rowId}}" aria-label="Search" class="form-control quantity" style="width: 100px">
-              </td>
-              <td class="font-weight-bold">
-                <strong>{{$item->subtotal}}</strong>
-              </td>
-              <td>
-                <form class=""  action="{{route('cart.destroy', $item->rowId)}}" method="post">
-                  {{csrf_field()}}
-                  {{method_field('DELETE')}}
-                  <button type="submit" class="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove item">X
-                </form>
-                </button>
-              </td>
-            </tr>
-            @endforeach
-            <!-- /.Table row -->
-
-            <!-- Subtotal row -->
-            <tr>
-              <td colspan="3"></td>
-              <td>
-                <h4 class="mt-2">
-                  <strong>Total</strong>
-                </h4>
-              </td>
-              <td class="text-right">
-                <h4 class="mt-2">
-                  <strong>{{Cart::subtotal()}}</strong>
-                </h4>
-              </td>
-              <td colspan="3" class="text-right">
-                <a href="{{route('checkout.index')}}" class="btn btn-primary btn-rounded btn-brown waves-effect waves-light">
-                  <span class="white-text">Complete purchase</span>
-                  <i class="fas fa-angle-right right"></i>
-                </a>
-              </td>
-            </tr>
-            <!-- /.Subtotal row -->
-
-          </tbody>
-          <!-- /.Table body -->
-
-        </table>
-
-      </div>
-      <!-- /.Shopping Cart table -->
-
-    </div>
-
+<div class="row">
+  <div class="col-md-8 text-left table-responsive text-nowrap mb-5">
+    <table class="table w-auto">
+      @foreach (Cart::content() as $item)
+      <tr>
+        <th>
+          <a href="{{route('product.show', $item->model->slug)}}">
+            <img src="{{asset('img/'.$item->model->slug.'/'.$item->model->slug.'-gallery00.png')}}" alt="" class="img-fluid">
+          </a>
+        </th>
+        <td class="align-middle">
+          <div class="row">
+            <a href="{{route('product.show', $item->model->slug)}}">
+              <h5><strong class="indigo-text">{{$item->model->name}}</strong></h5>
+            </a>
+          </div>
+          <div class="row my-0">
+            <p>({{$item->model->details}})</p>
+          </div>
+          <div class="row">
+            <p>Price: {{$item->model->presentPrice()}}</p>
+          </div>
+        </td>
+        <td class="align-middle">
+          <input type="number" value="{{$item->qty}}" data-id="{{$item->rowId}}" aria-label="Search" class="form-control quantity" style="width: 75px">
+        </td>
+        <td class="px-5 align-middle">
+          <div class="row my-0">
+            <p><strong>Subtotal:</strong></p>
+          </div>
+          <div class="row">
+            <p>{{presentPrice($item->subtotal)}}</p>
+          </div>
+        </td>
+        <td class="align-middle">
+          <form class=""  action="{{route('cart.destroy', $item->rowId)}}" method="post">
+            {{csrf_field()}}
+            {{method_field('DELETE')}}
+            <button type="submit" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove item">Delete
+          </form>
+          </button>
+        </td>
+      </tr>
+      @endforeach
+    </table>
   </div>
-
+  <div class="col-md-4 text-center">
+    <div class="card position-fixed">
+      <div class="card-body grey lighten-3 table-responsive text-nowrap">
+        <table class="table">
+          <tr>
+            <td class="py-3 pr-4 text-left">Subtotal</td>
+            <td class="py-3 pl-4 text-right">{{presentPrice(Cart::subtotal())}}</td>
+          </tr>
+          <tr>
+            <td class="py-3 pr-4 text-left">Tax (8%)</td>
+            <td class="py-3 pl-4 text-right">{{presentPrice(Cart::tax())}}</td>
+          </tr>
+          <tr>
+            <td class="py-3 pr-4 text-left"><strong>Total</strong></td>
+            <td class="py-3 pl-4 text-right">{{presentPrice(Cart::total())}}</td>
+          </tr>
+        </table>
+        <a href="{{route('checkout.index')}}" class="btn btn-primary btn-outline-unique">
+          Complete purchase
+          <i class="fas fa-angle-right right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 @section('extra-js')

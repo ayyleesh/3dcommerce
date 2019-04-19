@@ -34,7 +34,7 @@
 
 @yield('banner')
 
-<main class="py-4 my-5">
+<main class="py-4 my-5" style="min-height: 100%">
   @yield('content')
 </main>
 
