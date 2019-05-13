@@ -1,6 +1,6 @@
 <!-- Gallery Thubmbail -->
 @for ($i = 0; $i < 4; $i++)
-<div class="col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+<div class="col-lg-6 col-md-6 col-sm-6" data-toggle="modal" data-target="#modal">
   <a href="#lightbox" data-slide-to="{{$i}}"><img src="{{asset("img/$product->slug/$product->slug-gallery0$i.png")}}" class="img-thumbnail my-3"></a>
 </div>
 @endfor

@@ -2,9 +2,6 @@
 <!--/. Side navigation links -->
   <ul class="navbar-nav">
     <li class="nav-item py-2 px-4">
-      <a href="#" class="nav-link waves-effect waves-light">View cart</a>
-    </li>
-    <li class="nav-item py-2 px-4">
       <a href="{{route('orders.index')}}" class="nav-link waves-effect waves-light">View Orders</a>
     </li>
     <li class="nav-item py-2 px-4">

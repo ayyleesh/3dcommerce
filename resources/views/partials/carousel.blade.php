@@ -14,7 +14,7 @@
 
 <!-- Carousel Modal -->
 </div>
-<div class="modal fade" id="carouselGallery" tabindex="-1" role="dialog" aria-labelledby="carouselGalleryLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="carouselGallery" tabindex="-1" role="dialog" aria-labelledby="carouselGalleryLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- 3d Model Modal -->
 <div class="modal fade right" id="open3dModel" tabindex="-1" role="dialog" aria-labelledby="open3dModelLabel" aria-hidden="true" data-backdrop='false'>
@@ -64,16 +64,20 @@
           </div>
           <div class="mx-2">
             <p class="text-center mb-1">Animate:</p>
-            <select id="animSelect" onchange="changeAnimation()" class="browser-default custom-select">
+            <select id="animSelect" onchange="playAnim()" class="browser-default custom-select">
               <option value="" selected>Default</option>
               <option value="1">Rotate X</option>
               <option value="2">Rotate Y</option>
               <option value="3">Rotate Z</option>
             </select>
           </div>
+          <div class="mx-2">
+            <p class="text-center mb-1">Render:</p>
+            <button id="renderToggle" type="button" class="btn btn-sm btn-secondary" onclick="toggleRender()" aria-pressed="false" autocomplete="off">Render</button>
+          </div>
         </div>
         <div class="align-center" style="padding: 10px 25%;">
-          <x3d>
+          <x3d id="element">
             <scene>
               <inline nameSpaceName="nintendo" mapDEFToID="true" url="{{asset('img/'.$product->slug.'/'.$product->slug.'-model.x3d')}}"></inline>
             </scene>

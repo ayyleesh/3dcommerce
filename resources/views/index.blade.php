@@ -8,11 +8,11 @@ Home
 <!--full page banner-->
 <div class="view intro-2">
   <div class="full-bg-img">
-    <div class="mask rgba-black-light flex-center">
+    <div class="mask flex-center">
       <div class="container text-center white-text">
         <div class="white-text text-center wow fadeInUp">
-          <h1>Hello</h1>
-          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+          <h1>Welcome</h1>
+          <h5>to your only place to find high quality retro game consoles.</h5>
         </div>
       </div>
     </div>
@@ -27,21 +27,21 @@ Home
   <section class="mt-5 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
     <h3 class="h3 text-center mb-5">About</h3>
     <div class="row my-5">
-      <div class="col-md-6 mb-4">
-        <img src="http://placehold.it/500x250" class="img-fluid z-depth-1-half" alt="">
+      <div class="col-md-4 mb-4 text-center">
+        <h1 class="display-1 text-center purple-text"><i class="fas fa-shopping-bag"></i></h1>
       </div>
-      <div class="col-md-6 mb-4 align-center text-center">
-        <h3 class="mb-3">Title 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <div class="col-md-8 mb-4 align-center text-center">
+        <h3 class="mb-3">Why us</h3>
+        <p>For those who missed your childhood game consoles, we have a solution for you. We built our own replicas of these game consoles. And we assure you that our replicas are 100% functional. You can pop in your old game cassette and play like it's 1990s!</p>
       </div>
     </div>
     <div class="row my-5">
-      <div class="col-md-6 mb-4 align-center text-center">
-        <h3 class="mb-3">Title 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <div class="col-md-8 mb-4 align-center text-center">
+        <h3 class="mb-3">Satisfaction Guarantee</h3>
+        <p>We 3D print our models with the finest material. We made sure that everything is flawless and working, without any scratches. No matter your console is from 1980s or 2000s, you will get a 2 year guarantee with us.</p>
       </div>
-      <div class="col-md-6 mb-4">
-        <img src="http://placehold.it/500x250" class="img-fluid z-depth-1-half" alt="">
+      <div class="col-md-4 mb-4">
+        <h1 class="display-1 text-center purple-text"><i class="fas fa-thumbs-up"></i></h1>
       </div>
     </div>
   </section>

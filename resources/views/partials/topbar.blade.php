@@ -14,9 +14,10 @@
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">Products</a>
           <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item" href="#">Nintendo Gameboy Classic</a>
-            <a class="dropdown-item" href="#">Nintendo Gameboy Advance SP</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="{{route('product.show', 'gameboy-classic')}}">Nintendo Gameboy Classic</a>
+            <a class="dropdown-item" href="{{route('product.show', 'gameboy-color')}}">Nintendo Gameboy Color</a>
+            <a class="dropdown-item" href="{{route('product.show', 'gameboy-advance-sp')}}">Nintendo Gameboy Advance SP</a>
+            <a class="dropdown-item" href="{{route('product.show', 'gameboy-micro')}}">Nintendo Gameboy Micro</a>
           </div>
         </li>
       </ul>
@@ -58,7 +59,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{route('cart.index')}}">
-        <i class="fas fa-shopping-cart"></i> Cart <span class="badge badge-warning ml-2">{{Cart::count()}}</span>
+        <i class="fas fa-shopping-cart"></i> Cart <span class="badge badge-secondary ml-2">{{Cart::count()}}</span>
       </a>
     </li>
     @endguest

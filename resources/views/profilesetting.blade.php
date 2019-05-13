@@ -6,16 +6,16 @@ Manage Profile
 @endsection
 
 @section('content')
-<div class="container h-75">
+<div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-8 offset-md-2 mt-5">
       @if (session()->has('success_message'))
         <div class="alert alert-success">
           {{session()->get('success_message')}}
         </div>
       @endif
       <h3>Account Settings</h3>
-      <form action="{{route('users.update')}}" method="POST">
+      <form action="{{route('users.update')}}" method="POST" class="my-5">
         @method('patch')
         {{csrf_field()}}
         <div class="md-form form-group">
