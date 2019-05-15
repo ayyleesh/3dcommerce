@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark black mb-0 mt-5 position-sticky">
+<nav class="navbar navbar-expand-lg navbar-dark black mb-0 mt-5">
   <a class="navbar-brand" href="#">© 2019</a>
   <ul class="navbar-nav ml-auto nav-flex-icons">
     <li class="nav-item">

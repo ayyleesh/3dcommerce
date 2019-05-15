@@ -47,22 +47,6 @@ function playAnim() {
   }
 }
 
-var headlight = true;
-function headlightOn() {
-  headlight = !headlight;
-  document.getElementById('nintendo__NavInfo').setAttribute('headlight', headlight.toString());
-}
-var omni = true;
-function omniOn() {
-  omni = !omni;
-  document.getElementById('nintendo__Omni001').setAttribute('on', omni.toString());
-  document.getElementById('nintendo__Omni002').setAttribute('on', omni.toString());
-  document.getElementById('nintendo__0mni003').setAttribute('on', omni.toString());
-  document.getElementById('nintendo__0mni004').setAttribute('on', omni.toString());
-  document.getElementById('nintendo__0mni005').setAttribute('on', omni.toString());
-  document.getElementById('nintendo__0mni006').setAttribute('on', omni.toString());
-}
-
 var count = 0;
 function toggleRender() {
   count ++;

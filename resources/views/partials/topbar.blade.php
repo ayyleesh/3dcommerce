@@ -1,5 +1,4 @@
 <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar gradientsolid">
-  <div class="container">
     <a class="navbar-brand" href="{{ url('/') }}">
       [WebName]
     </a>
@@ -64,6 +63,5 @@
     </li>
     @endguest
   </ul>
-</div>
 </div>
 </nav>

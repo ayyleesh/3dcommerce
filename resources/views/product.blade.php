@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="{{asset('css/lightslider.css')}}">
 <script src="{{asset('js/lightslider.js')}}" charset="utf-8"></script>
 
-<script src="{{asset('js/control3dModel.js')}}" charset="utf-8"></script>
 
 @endsection
 
@@ -29,7 +28,7 @@
 @endsection
 
 @section('content')
-<div class="container w-75">
+<div class="container">
   <!-- product desc -->
   <div class="row my-5">
     <div class="col-md-6 align-middle text-right px-4">
@@ -73,4 +72,5 @@
 
 @section('extra-js')
 <script src="{{asset('js/x3dom.js')}}" charset="utf-8"></script>
+<script src="{{asset('js/control3dModel.js')}}" charset="utf-8"></script>
 @endsection
