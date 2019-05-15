@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="{{asset('css/lightslider.css')}}">
 <script src="{{asset('js/lightslider.js')}}" charset="utf-8"></script>
 
+<script src="{{asset('js/control3dModel.js')}}" charset="utf-8"></script>
+
 @endsection
 
 @section('banner')
@@ -46,13 +48,24 @@
       @include('partials.carousel')
     </div>
   </div>
-
   <hr>
-  <h3 class="text-center">Gallery</h3>
-  <div class="row my-5">
-  <!-- carousel -->
-    @include('partials.gallery')
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center">Gallery</h3>
+      <div class="row mb-5 px-1">
+      @include('partials.gallery')
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-center">Videos</h3>
+      <div class="row mb-5 px-1 py-3">
+        @include('partials.videocarousel')
+      </div>
+    </div>
   </div>
+  <hr>
+  <h3 class="text-center">Details</h3>
+    @include('partials.details')
 
   <hr>
 </div>
@@ -60,5 +73,4 @@
 
 @section('extra-js')
 <script src="{{asset('js/x3dom.js')}}" charset="utf-8"></script>
-<script src="{{asset('js/control3dModel.js')}}" charset="utf-8"></script>
 @endsection
