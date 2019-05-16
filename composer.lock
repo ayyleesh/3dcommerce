@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26a499eb19b27ac44d96a1453968db8f",
+    "content-hash": "bf96cf1ee2577cfcd5fb1bf2e6f44bad",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -551,16 +551,16 @@
         },
         {
             "name": "hardevine/shoppingcart",
-            "version": "2.6.1",
+            "version": "2.6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hardevine/LaravelShoppingcart.git",
-                "reference": "05de8fd9868978ae59fd490eece7a0a7169d15f8"
+                "reference": "599fb6d7b29d55994789c2642aed2eb49c318107"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hardevine/LaravelShoppingcart/zipball/05de8fd9868978ae59fd490eece7a0a7169d15f8",
-                "reference": "05de8fd9868978ae59fd490eece7a0a7169d15f8",
+                "url": "https://api.github.com/repos/hardevine/LaravelShoppingcart/zipball/599fb6d7b29d55994789c2642aed2eb49c318107",
+                "reference": "599fb6d7b29d55994789c2642aed2eb49c318107",
                 "shasum": ""
             },
             "require": {
@@ -607,7 +607,7 @@
                 "laravel",
                 "shoppingcart"
             ],
-            "time": "2019-03-18T07:57:52+00:00"
+            "time": "2019-04-20T17:52:25+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",

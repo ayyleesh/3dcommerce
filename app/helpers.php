@@ -2,5 +2,5 @@
 
 function presentPrice($price)
 {
-  return $price;
+  return 'JPY'.number_format($price, 0, ".", ",");
 }

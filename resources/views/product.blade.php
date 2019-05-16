@@ -14,8 +14,8 @@
 
 @section('banner')
 <!-- banner -->
-<div class="productbanner h-50" style="background: url('{{asset("img/$product->slug/$product->slug-banner.png")}}')">
-  <div class="mask pattern-1 flex-center">
+<div class="productbanner h-50" style="background: url('{{asset("img/$product->slug/$product->slug-banner.jpg")}}')">
+  <div class="mask rgba-indigo-light flex-center">
     <div class="full-bg-img flex-center">
       <div class="container text-center white-text">
         <div class="white-text text-center wow fadeInUp">

@@ -10,7 +10,7 @@ Dashboard
     <div class="card-deck">
       <!-- Card -->
       <div class="card card-image gradientsolid mx-4">
-        <a href="">
+        <a href="{{route('cart.index')}}">
           <div class="text-white text-center align-items-center py-5 px-5 rounded mb-0">
             <span class="white-text display-4"><i class="fas fa-shopping-cart"></i></span>
             <h4 class="card-title text-center mt-3">View Cart</h4>

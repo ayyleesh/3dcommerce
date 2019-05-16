@@ -50,15 +50,15 @@
         <table class="table">
           <tr>
             <td class="py-3 pr-4 text-left">Subtotal</td>
-            <td class="py-3 pl-4 text-right">{{presentPrice(Cart::subtotal())}}</td>
+            <td class="py-3 pl-4 text-right">JPY{{Cart::subtotal()}}</td>
           </tr>
           <tr>
             <td class="py-3 pr-4 text-left">Tax (8%)</td>
-            <td class="py-3 pl-4 text-right">{{presentPrice(Cart::tax())}}</td>
+            <td class="py-3 pl-4 text-right">JPY{{Cart::tax()}}</td>
           </tr>
           <tr>
             <td class="py-3 pr-4 text-left"><strong>Total</strong></td>
-            <td class="py-3 pl-4 text-right">{{presentPrice(Cart::total())}}</td>
+            <td class="py-3 pl-4 text-right">JPY{{Cart::total()}}</td>
           </tr>
         </table>
         <a href="{{route('checkout.index')}}" class="btn btn-primary btn-outline-unique">

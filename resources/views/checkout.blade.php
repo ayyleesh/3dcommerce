@@ -171,15 +171,15 @@ Checkout
             <!-- subtotals -->
             <tr>
               <td colspan="2" class="py-3 pr-4 text-left">Subtotal</td>
-              <td colspan="2" class="py-3 pl-4 text-right">{{presentPrice(Cart::subtotal())}}</td>
+              <td colspan="2" class="py-3 pl-4 text-right">JPY{{Cart::subtotal()}}</td>
             </tr>
             <tr>
               <td colspan="2" class="py-3 pr-4 text-left">Tax (8%)</td>
-              <td colspan="2" class="py-3 pl-4 text-right">{{presentPrice(Cart::tax())}}</td>
+              <td colspan="2" class="py-3 pl-4 text-right">JPY{{Cart::tax()}}</td>
             </tr>
             <tr>
               <td colspan="2" class="py-3 pr-4 text-left"><h5>Total</h5></td>
-              <td colspan="2" class="py-3 pl-4 text-right"><h5>{{presentPrice(Cart::total())}}</h5></td>
+              <td colspan="2" class="py-3 pl-4 text-right"><h5>JPY{{Cart::total()}}</h5></td>
             </tr>
           </table>
           <button type="submit" class="btn btn-outline-unique btn-lg btn-block">Check Out</button>
