@@ -88,7 +88,7 @@ Checkout
         <div class="form-row">
           <div class="col-md-12">
             <div class="md-form form-group">
-              <input type="text" class="form-control" id="cardnumberinput" name="cardnumber" value="">
+              <input type="text" class="form-control" id="cardnumberinput" name="cardnumber" maxlength="16" onkeypress="validate(event)">
               <label for="cardnumberinput">Card number</label>
             </div>
           </div>
@@ -112,7 +112,7 @@ Checkout
           <div class="col-md-6">
             <!-- Material input -->
             <div class="md-form form-group">
-              <input type="password" class="form-control" id="cvvinput" name="cvv" value="">
+              <input type="password" class="form-control" id="cvvinput" name="cvv" maxlength="4" onkeypress="validate(event)">
               <label for="cvvinput">CVV</label>
             </div>
           </div>
@@ -127,12 +127,12 @@ Checkout
                 </div>
                 <!-- Grid column -->
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="expirymonth" name="expm" value="">
+                  <input type="text" class="form-control" id="expirymonth" name="expm" maxlength="2" onkeypress="validate(event)">
                   <label for="expirymonth">MM</label>
                 </div>
                 <!-- Grid column -->
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="expiryyear" name="expy" value="">
+                  <input type="text" class="form-control" id="expiryyear" name="expy" maxlength="2" onkeypress="validate(event)">
                   <label for="expiryyear">YY</label>
                 </div>
               </div>
@@ -190,5 +190,24 @@ Checkout
     </div>
   </div>
 </div>
+<script type="text/javascript">
+function validate(evt) {
+var theEvent = evt || window.event;
+
+// Handle paste
+if (theEvent.type === 'paste') {
+    key = event.clipboardData.getData('text/plain');
+} else {
+// Handle key press
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode(key);
+}
+var regex = /[0-9]|\./;
+if( !regex.test(key) ) {
+  theEvent.returnValue = false;
+  if(theEvent.preventDefault) theEvent.preventDefault();
+}
+}
+</script>
 <!-- Extended material form grid -->
 @endsection
